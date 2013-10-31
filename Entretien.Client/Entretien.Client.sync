@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<syncDesignerSurface dslVersion="1.0.0.0" Id="d68a82b7-fa6e-4738-8481-a3239ea9f3e1" parentDesignerName="Entretien" codeGenerationMode="ClientOnly" synchronizeInOneTransaction="false" clientFileLocation="02309360-dc09-4c98-a80d-04b6f3040a85" serverFileLocation="fcbc5940-da27-4cc2-a2e4-5f57818d6c3d" isRootSyncDesigner="false" rootSyncDesignerHintPath="..\MiddleServiceApp\Entretien.sync" rootSyncDesignerShouldGenerateCode="true" isClientSyncDesigner="true" isServerSyncDesigner="false" changeTrackingType="SqlServerChangeTracking" xmlns="http://schemas.microsoft.com/dsltools/SyncDesigner">
+  <syncTables>
+    <syncTable Id="ef2da394-f941-4151-8517-2fd1ea248c54" name="ClientSyncTable" syncDirection="DownloadOnly" creationOptions="DropExistingOrCreateNewTable" tableName="Client" fullTableName="dbo.Client" deletedDateColumnName="DeletionDate" transactionIndex="0">
+      <syncGroup>
+        <syncGroupMoniker name="/d68a82b7-fa6e-4738-8481-a3239ea9f3e1/ClientSyncGroup" />
+      </syncGroup>
+    </syncTable>
+    <syncTable Id="2aca7ee1-c452-4b66-b395-7391f664e13f" name="CommandeSyncTable" syncDirection="DownloadOnly" creationOptions="DropExistingOrCreateNewTable" tableName="Commande" fullTableName="dbo.Commande" deletedDateColumnName="DeletionDate" transactionIndex="0">
+      <syncGroup>
+        <syncGroupMoniker name="/d68a82b7-fa6e-4738-8481-a3239ea9f3e1/CommandeSyncGroup" />
+      </syncGroup>
+    </syncTable>
+  </syncTables>
+  <syncGroups>
+    <syncGroup Id="eb2bc057-35bd-446f-af0e-2bc4e65d0d90" name="ClientSyncGroup" />
+    <syncGroup Id="f555e0cc-70cd-4af2-a38d-a4703229cf86" name="CommandeSyncGroup" />
+  </syncGroups>
+  <clientSyncProvider>
+    <clientSyncProvider Id="a4a06c4a-5964-4329-aacc-ff961b492283" name="EntretienClientSyncProvider">
+      <syncConnection>
+        <syncConnectionMoniker name="/d68a82b7-fa6e-4738-8481-a3239ea9f3e1/ClientConnection" />
+      </syncConnection>
+    </clientSyncProvider>
+  </clientSyncProvider>
+  <syncAgent>
+    <syncAgent name="EntretienSyncAgent" synchronizeInOneTransaction="false">
+      <clientSyncProvider>
+        <clientSyncProviderMoniker name="/d68a82b7-fa6e-4738-8481-a3239ea9f3e1/EntretienClientSyncProvider" />
+      </clientSyncProvider>
+      <syncTables>
+        <syncTableMoniker name="/d68a82b7-fa6e-4738-8481-a3239ea9f3e1/ClientSyncTable" />
+        <syncTableMoniker name="/d68a82b7-fa6e-4738-8481-a3239ea9f3e1/CommandeSyncTable" />
+      </syncTables>
+    </syncAgent>
+  </syncAgent>
+  <syncConnections>
+    <syncConnection Id="04cf55ae-39ca-4b26-98fa-9d175e9b1304" connectionString="Data Source=C:\Users\rex\Desktop\Entretien\Entretien.Client\entretienl.sdf;Max Database Size=2047" providerInvariantName="Microsoft.SqlServerCe.Client.3.5" name="ClientConnection" connectionDisplayString="entretienl.sdf2" isAppSettings="false" appSettingsObjectName="&lt;&lt;FSIM&gt;&gt;" appSettingsPropertyReference="" />
+  </syncConnections>
+</syncDesignerSurface>
